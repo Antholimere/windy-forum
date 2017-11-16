@@ -4,6 +4,10 @@ const cookieSession = require("cookie-session");
 const bodyParser = require("body-parser");
 const keys = require("./config/keys");
 
+mongoose.connect(keys.mongoURI)
+
+require("./models/Spot");
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -13,6 +17,8 @@ app.use(
     keys: [keys.cookieKey]
   })
 );
+
+require("./routes/spotRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets

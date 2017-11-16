@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://username:password@ds127065.mlab.com:27065/branched-dev",
+  mongoURI: "mongodb://username:password@ds121965.mlab.com:21965/windy-forum-dev",
   cookieKey: "randomstringofcharacters"
 };
