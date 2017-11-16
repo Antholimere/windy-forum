@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
-secrets.js
+package.json
+config/secrets.js
